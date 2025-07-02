@@ -1,6 +1,6 @@
 # Awesome Public Check Sheet
 
-📋 A curated list of publicly available security check sheets and trust pages from SaaS and cloud service providers in Japan.
+📋 A curated list of publicly available security check sheets and trust pages from SaaS and cloud service providers.
 
 ---
 
