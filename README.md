@@ -6,6 +6,7 @@
 
 ## 🇯🇵 Japan
 
+- [Classmethod – Security Policy](https://classmethod.jp/policy/)
 - [Cybozu – Security Check Sheet](https://www.cybozu.com/jp/support/?_gl=1*19ecqcm*_gcl_au*NDM2MDYwMTEuMTc1MTQ2MzQ4Ng..*_ga*MTcwODY4NDkyOC4xNzUxNDYzNDg2*_ga_T5K95WXL54*czE3NTE0NjM0ODYkbzEkZzAkdDE3NTE0NjM0ODYkajYwJGwwJGgw#security_check_sheet)
 - [freee – Security Information](https://www.freee.co.jp/security/)
 - [Mackerel – Security Check Sheet](https://ja.mackerel.io/security-checksheet)
