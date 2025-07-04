@@ -9,6 +9,7 @@
 - [Classmethod – Security Policy](https://classmethod.jp/policy/)
 - [Cybozu – Security Check Sheet](https://www.cybozu.com/jp/support/?_gl=1*19ecqcm*_gcl_au*NDM2MDYwMTEuMTc1MTQ2MzQ4Ng..*_ga*MTcwODY4NDkyOC4xNzUxNDYzNDg2*_ga_T5K95WXL54*czE3NTE0NjM0ODYkbzEkZzAkdDE3NTE0NjM0ODYkajYwJGwwJGgw#security_check_sheet)
 - [freee – Security Information](https://www.freee.co.jp/security/)
+- [Levii - Security Check Sheet](https://balus-help.levii.co.jp/hc/ja/articles/20147133163417-%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%82%B7%E3%83%BC%E3%83%88)
 - [Mackerel – Security Check Sheet](https://ja.mackerel.io/security-checksheet)
 - [Nulab – Security Check Sheets](https://nulab.com/ja/security-checksheet/)
 - [Safie – Security Check Sheet](https://support.safie.link/hc/ja/articles/4595555276953-%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%82%B7%E3%83%BC%E3%83%88)
