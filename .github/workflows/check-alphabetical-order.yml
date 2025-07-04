@@ -1,0 +1,84 @@
+name: Check Alphabetical Order
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  check-alphabetical-order:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Extract Japan section links
+      id: extract-links
+      run: |
+        # Extract the Japan section from README.md
+        sed -n '/## 🇯🇵 Japan/,/^---$/p' README.md | \
+        grep -E '^\- \[.*\]' | \
+        sed 's/^- \[\(.*\)\] –.*/\1/' > japan_links.txt
+        
+        echo "Links extracted:"
+        cat japan_links.txt
+        
+        # Store the content for AI inference
+        echo "JAPAN_LINKS<<EOF" >> $GITHUB_OUTPUT
+        cat japan_links.txt >> $GITHUB_OUTPUT
+        echo "EOF" >> $GITHUB_OUTPUT
+    
+    - name: Check alphabetical order with AI
+      id: ai-check
+      uses: actions/ai-inference@v1.0.0
+      with:
+        model: 'gpt-4o-mini'
+        prompt: |
+          Please check if the following list is sorted in alphabetical order.
+          Compare case-insensitively, starting from the first character.
+          
+          List:
+          ${{ steps.extract-links.outputs.JAPAN_LINKS }}
+          
+          Please respond in the following format:
+          - If sorted alphabetically: "✅ PASS: The list is correctly sorted in alphabetical order"
+          - If not sorted alphabetically: "❌ FAIL: The list is not sorted in alphabetical order. Correct order: [show the correct order]"
+    
+    - name: Display check result
+      run: |
+        echo "### Alphabetical Order Check Result" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "${{ steps.ai-check.outputs.response }}" >> $GITHUB_STEP_SUMMARY
+        
+        # Check if the result contains "FAIL"
+        if echo "${{ steps.ai-check.outputs.response }}" | grep -q "FAIL"; then
+          echo "❌ Alphabetical order check failed"
+          exit 1
+        else
+          echo "✅ Alphabetical order check passed"
+        fi
+    
+    - name: Comment on PR
+      if: github.event_name == 'pull_request'
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const result = `${{ steps.ai-check.outputs.response }}`;
+          const body = `## 🔍 Alphabetical Order Check Result
+
+${result}
+
+---
+This check was automatically performed by AI.`;
+          
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: body
+          }); 
