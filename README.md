@@ -16,6 +16,7 @@
 - [Safie – Security Check Sheet](https://support.safie.link/hc/ja/articles/4595555276953-%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%82%B7%E3%83%BC%E3%83%88)
 - [Sakura Internet – Security Check Sheet](https://www.sakura.ad.jp/corporate/security/checksheet/)
 - [SmartHR – Security Page](https://smarthr.jp/about/security/)
+- [SORACOM – Security Policy](https://soracom.jp/share/security_policy/)
 - [Studio – Security Measures](https://help.studio.design/ja/articles/4682161-studio%E3%81%AE%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E5%AF%BE%E7%AD%96)
 
 ---
