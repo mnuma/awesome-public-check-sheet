@@ -63,6 +63,7 @@
 - [Datadog – Trust Center](https://trust.datadoghq.com/)
 - [GitLab – Trust Center](https://trust.gitlab.com/)
 - [Linear – Trust Center](https://trust.linear.app/)
+- [Nizlo – Security Architecture](https://nizlo.com/security)
 - [Notion – Security](https://www.notion.com/ja/security)
 - [OpenAI – Trust Portal](https://trust.openai.com/)
 - [Salesforce – Security](https://security.salesforce.com/)
